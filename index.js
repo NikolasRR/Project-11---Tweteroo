@@ -14,6 +14,12 @@ app.post("/sign-up", (req, res) => {
     res.send("OK");
 });
 
+app.post("/tweets", (req, res) => {
+    tweets.push(req.body);
+    res.send("OK");
+    console.log(req.body);
+});
+
 
 
 app.listen(5000, () => console.log("server online"));
